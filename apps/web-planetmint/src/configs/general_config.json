@@ -1,0 +1,10 @@
+{
+  "maintainer": {
+    "name": "Planetmint",
+    "url": "https://planetmint.io"
+  },
+  "github": {
+    "reportIssue": "https://github.com/planetmint/big-dipper-2.0-cosmos/issues"
+  },
+  "version": "v3.0.0"
+}
