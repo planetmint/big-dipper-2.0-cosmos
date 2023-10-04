@@ -208,8 +208,8 @@
   "keplr": "{}",
   "chains": [
     {
-      "network": "planetmintgotestv1",
-      "chainType": "Testnet",
+      "network": "planetmint-testnet-1",
+      "chainType": "testnet",
       "genesis": {
         "time": "2023-09-14T12:07:15.089872784Z",
         "height": 1
@@ -220,7 +220,7 @@
         "account": "plmnt"
       },
       "primaryTokenUnit": "plmnt",
-      "votingPowerTokenUnit": "plmnt",
+      "votingPowerTokenUnit": "stake",
       "tokenUnits": {
         "plmnt": {
           "display": "plmnt",
