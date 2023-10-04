@@ -1,14 +1,12 @@
 import * as R from 'ramda';
 import type { Categories } from '@/models/msg/types';
 
-class MsgRequestPostOwnerTransfer {
+class MsgRefusePostOwnerTransferRequest {
   public category: Categories;
 
   public type: string;
 
   public json: object;
-
-  public sender: string;
 
   public receiver: string;
 
@@ -20,8 +18,7 @@ class MsgRequestPostOwnerTransfer {
     this.category = 'posts';
     this.type = R.pathOr('', ['type'], payload);
     this.json = R.pathOr({}, ['json'], payload);
-    this.sender = R.pathOr('', ['sender'], payload);
-    this.receiver  = R.pathOr('', ['receiver'], payload);
+    this.receiver = R.pathOr('', ['receiver'], payload);
     this.post_id = R.pathOr('', ['post_id'], payload);
     this.subspace_id = R.pathOr('', ['subspace_id'], payload);
   }
@@ -31,7 +28,6 @@ class MsgRequestPostOwnerTransfer {
       category: 'posts',
       type: R.pathOr('', ['@type'], json),
       json,
-      sender: R.pathOr('', ['sender'], json),
       receiver: R.pathOr('', ['receiver'], json),
       post_id: R.pathOr('', ['post_id'], json),
       subspace_id: R.pathOr('', ['subspace_id'], json),
@@ -39,4 +35,4 @@ class MsgRequestPostOwnerTransfer {
   }
 }
 
-export default MsgRequestPostOwnerTransfer;
+export default MsgRefusePostOwnerTransferRequest;

@@ -2,11 +2,11 @@ import Typography from '@mui/material/Typography';
 import AppTrans from '@/components/AppTrans';
 import { FC } from 'react';
 import Name from '@/components/name';
-import MsgBurn from '@/models/msg/tokenfactory/msg_burn';
+import MsgMint from '@/models/msg/tokenfactory/msg_mint';
 import { useProfileRecoil } from '@/recoil/profiles/hooks';
 import { formatNumber, formatToken } from '@/utils/format_token';
 
-const Burn: FC<{ message: MsgBurn }> = props => {
+const Mint: FC<{ message: MsgMint }> = (props) => {
   const { message } = props;
 
   const sender = useProfileRecoil(message.sender);
@@ -23,7 +23,7 @@ const Burn: FC<{ message: MsgBurn }> = props => {
   return (
     <Typography>
       <AppTrans
-        i18nKey="message_contents:txMsgBurn"
+        i18nKey="message_contents:txMsgMint"
         components={[<Name address={message.sender} name={senderMoniker} />, <b />]}
         values={{
           sender: senderMoniker,
@@ -35,4 +35,4 @@ const Burn: FC<{ message: MsgBurn }> = props => {
   );
 };
 
-export default Burn;
+export default Mint;

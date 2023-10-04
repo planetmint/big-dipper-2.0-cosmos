@@ -1,29 +1,26 @@
 import * as R from 'ramda';
 import type { Categories } from '@/models/msg/types';
 
-class MsgMovePost {
+class MsgAcceptPostOwnerTransferRequest {
   public category: Categories;
 
   public type: string;
 
   public json: object;
 
-  public owner: string;
-
-  public subspace_id: string;
+  public receiver: string;
 
   public post_id: string;
 
-  public target_subspace_id: string;
+  public subspace_id: string;
 
   constructor(payload: object) {
     this.category = 'posts';
     this.type = R.pathOr('', ['type'], payload);
     this.json = R.pathOr({}, ['json'], payload);
-    this.owner = R.pathOr('', ['owner'], payload);
-    this.subspace_id  = R.pathOr('', ['subspace_id'], payload);
+    this.receiver = R.pathOr('', ['receiver'], payload);
     this.post_id = R.pathOr('', ['post_id'], payload);
-    this.target_subspace_id = R.pathOr('', ['target_subspace_id'], payload);
+    this.subspace_id = R.pathOr('', ['subspace_id'], payload);
   }
 
   static fromJson(json: object) {
@@ -31,12 +28,11 @@ class MsgMovePost {
       category: 'posts',
       type: R.pathOr('', ['@type'], json),
       json,
-      owner: R.pathOr('', ['owner'], json),
-      subspace_id: R.pathOr('', ['subspace_id'], json),
+      receiver: R.pathOr('', ['receiver'], json),
       post_id: R.pathOr('', ['post_id'], json),
-      target_subspace_id: R.pathOr('', ['target_subspace_id'], json),
+      subspace_id: R.pathOr('', ['subspace_id'], json),
     };
   }
 }
 
-export default MsgMovePost;
+export default MsgAcceptPostOwnerTransferRequest;
