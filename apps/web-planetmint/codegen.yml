@@ -3,7 +3,7 @@ generates:
   ./src/graphql/types/general_types.ts:
     documents:
       - 'src/graphql/general/*'
-    schema: https://planetmint-go-testnet-explorer.rddl.io/v1/graphql
+    schema: https://testnet-explorer.rddl.io/v1/graphql
     config:
       # omitOperationSuffix: true
       skipTypeNameForRoot: true

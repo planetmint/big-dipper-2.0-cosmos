@@ -228,9 +228,9 @@
         }
       },
       "endpoints": {
-        "graphql": "https://planetmint-go-testnet-explorer.rddl.io/v1/graphql",
-        "graphqlWebsocket": "wss://planetmint-go-testnet-explorer.rddl.io/v1/graphql",
-        "publicRpcWebsocket": "wss://planetmint-go-testnet-rpc.rddl.io/websocket"
+        "graphql": "https://testnet-explorer.rddl.io/v1/graphql",
+        "graphqlWebsocket": "wss://testnet-explorer.rddl.io/v1/graphql",
+        "publicRpcWebsocket": "wss://testnet-rpc.rddl.io/websocket"
       },
       "marketing": {
         "matomoURL": "https://analytics.bigdipper.live",
