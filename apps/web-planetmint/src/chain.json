@@ -208,10 +208,10 @@
   "keplr": "{}",
   "chains": [
     {
-      "network": "planetmint-testnet-1",
-      "chainType": "testnet",
+      "network": "planetmint-mainnet-1",
+      "chainType": "mainnet",
       "genesis": {
-        "time": "2023-09-14T12:07:15.089872784Z",
+        "time": "2023-10-10T10:10:10.101010101Z",
         "height": 1
       },
       "prefix": {
@@ -228,9 +228,9 @@
         }
       },
       "endpoints": {
-        "graphql": "https://testnet-explorer.rddl.io/v1/graphql",
-        "graphqlWebsocket": "wss://testnet-explorer.rddl.io/v1/graphql",
-        "publicRpcWebsocket": "wss://testnet-rpc.rddl.io/websocket"
+        "graphql": "https://explorer.rddl.io/v1/graphql",
+        "graphqlWebsocket": "wss://explorer.rddl.io/v1/graphql",
+        "publicRpcWebsocket": "wss://rpc.rddl.io/websocket"
       },
       "marketing": {
         "matomoURL": "https://analytics.bigdipper.live",
