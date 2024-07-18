@@ -208,6 +208,36 @@
   "keplr": "{}",
   "chains": [
     {
+      "network": "planetmint-testnet-1",
+      "chainType": "testnet",
+      "genesis": {
+        "time": "2023-09-14T12:07:15.089872784Z",
+        "height": 1
+      },
+      "prefix": {
+        "consensus": "plmntvalcons",
+        "validator": "plmntvaloper",
+        "account": "plmnt"
+      },
+      "primaryTokenUnit": "plmnt",
+      "votingPowerTokenUnit": "stake",
+      "tokenUnits": {
+        "plmnt": {
+          "display": "plmnt",
+          "exponent": 0
+        }
+      },
+      "endpoints": {
+        "graphql": "https://testnet-explorer.rddl.io/v1/graphql",
+        "graphqlWebsocket": "wss://testnet-explorer.rddl.io/v1/graphql",
+        "publicRpcWebsocket": "wss://testnet-rpc.rddl.io/websocket"
+      },
+      "marketing": {
+        "matomoURL": "https://analytics.bigdipper.live",
+        "matomoSiteID": "8"
+      }
+    },
+    {
       "network": "planetmint-mainnet-1",
       "chainType": "mainnet",
       "genesis": {
